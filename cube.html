@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rotating cube</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<style>
+body{
+      background: #ddd;
+    }
+#wrapper {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  perspective: 1500px;
+}
+
+.box-area {
+  position: relative;
+  transform-style: preserve-3d;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 360deg);
+    ;
+  }
+}
+
+.box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #262626;
+}
+
+#box-front {
+  transform: translateX(-100px) translateY(-100px) translateZ(100px);
+  background: rgba(255, 16, 107, 0.5);
+}
+
+#box-back {
+  transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+  background: rgba(1, 251, 236, 0.5);
+}
+
+#box-right {
+  transform: translateY(-100px) rotateY(90deg);
+  background: rgba(4, 255, 116, 0.5);
+}
+
+#box-left {
+  transform: translateY(-100px) translateX(-200px) rotateY(90deg);
+  background: rgba(216, 255, 0, 0.5);
+}
+
+#box-top {
+  transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+  background: rgba(0, 6, 246, 0.5);
+}
+
+#box-bottom {
+  transform: translateX(-100px) rotateX(90deg);
+  background: rgba(255, 30, 0, 0.5);
+}
+
+.box-area {
+  transform: rotateX(90deg) rotateY(90deg);
+}
+
+
+
+#wrapper1 {
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  perspective: 1500px;
+}
+
+.box-area1 {
+  position: relative;
+  transform-style: preserve-3d;
+  animation-name: rotate1;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+    ;
+  }
+}
+
+.box1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #262626;
+}
+
+#box-front1 {
+  transform: translateX(-100px) translateY(-100px) translateZ(100px);
+  background: rgba(255, 16, 107, 0.5);
+}
+
+#box-back1 {
+  transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+  background: rgba(1, 251, 236, 0.5);
+}
+
+#box-right1 {
+  transform: translateY(-100px) rotateY(90deg);
+  background: rgba(4, 255, 116, 0.5);
+}
+
+#box-left1 {
+  transform: translateY(-100px) translateX(-200px) rotateY(90deg);
+  background: rgba(216, 255, 0, 0.5);
+}
+
+#box-top1 {
+  transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+  background: rgba(0, 6, 246, 0.5);
+}
+
+#box-bottom1 {
+  transform: translateX(-100px) rotateX(90deg);
+  background: rgba(255, 30, 0, 0.5);
+}
+
+.box-area1 {
+  transform: rotateX(90deg) rotateY(90deg);
+}
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+<div id="wrapper">
+  <div class="box-area">
+    <div id="box-front" class="box"></div>
+    <div id="box-right" class="box"></div>
+    <div id="box-back" class="box"></div>
+    <div id="box-left" class="box"></div>
+    <div id="box-top" class="box"></div>
+    <div id="box-bottom" class="box"></div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<div id="wrapper1">
+  <div class="box-area1">
+    <div id="box-front1" class="box"></div>
+    <div id="box-right1" class="box"></div>
+    <div id="box-back1" class="box"></div>
+    <div id="box-left1" class="box"></div>
+    <div id="box-top1" class="box"></div>
+    <div id="box-bottom1" class="box"></div>
+  </div>
+</div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</html>
